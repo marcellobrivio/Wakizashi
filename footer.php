@@ -1,6 +1,8 @@
-		<div id="footer">
-			<p>&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?> &middot; <?php echo get_option("wakizashi_footer_info"); ?> &middot; Powered by <a href="http://www.marcellobrivio.com/wakizashi" title="Wakizashi WordPress Theme" target="_blank">Wakizashi</a>, a simple <a href="http://www.wordpress.org/" title="WordPress">WordPress</a> theme for filmmakers created by <a href="http://www.marcellobrivio.com/" title="Marcello Brivio - WordPress Evangelist" target="_blank">Marcello Brivio</a></p>
-		</div>
+		<footer>
+			<div id="footer">
+				<p>&copy; <?php echo date('Y'); ?> <?php bloginfo('name'); ?> &middot; <?php echo get_option("wakizashi_footer_info"); ?> &middot; Powered by <a href="http://www.marcellobrivio.com/wakizashi" title="Wakizashi WordPress Theme" target="_blank">Wakizashi</a>, a simple <a href="http://www.wordpress.org/" title="WordPress">WordPress</a> theme for filmmakers created by <a href="http://www.marcellobrivio.com/" title="Marcello Brivio - WordPress Evangelist" target="_blank">Marcello Brivio</a></p>
+			</div>
+		</footer>
 	
 	</div>
 	<!-- /Container -->

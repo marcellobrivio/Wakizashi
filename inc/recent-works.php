@@ -8,28 +8,36 @@ $related_posts = new WP_Query(
 );
 ?>
 <?php if( $related_posts->have_posts() ) : ?>
-	<h3 id="related-works">Some recent works...</h3>
-	<?php while ($related_posts->have_posts()) : $related_posts->the_post(); ?>
-	
-		<?php 
-		// Recover the category
-		$category = get_the_category();
-		?>
+
+	<section>
 		
-		<a class="list-item size-M" href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
-			<?php the_post_thumbnail('size-M'); ?>
-			<div class="overlay">
-				<div class="overlay-inner">
-					<h3><?php the_title(); ?></h3>
-					
-					<?php if ($category != '') : ?>
-						<p><?php echo $category[0]->cat_name; ?></p>
-					<?php endif; ?>
+		<header>
+			<h3 id="related-works">Some recent works...</h3>
+		</header>
+		<?php while ($related_posts->have_posts()) : $related_posts->the_post(); ?>
+		
+			<?php 
+			// Recover the category
+			$category = get_the_category();
+			?>
+			
+			<a class="list-item size-M" href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
+				<?php the_post_thumbnail('size-M'); ?>
+				<div class="overlay">
+					<div class="overlay-inner">
+						<h3><?php the_title(); ?></h3>
+						
+						<?php if ($category != '') : ?>
+							<p><?php echo $category[0]->cat_name; ?></p>
+						<?php endif; ?>
+					</div>
 				</div>
-			</div>
-		</a>
+			</a>
+		
+		<?php endwhile; ?>
+		
+	</section>
 	
-	<?php endwhile; ?>
 <?php else : ?>
 	<div id="line-eraser"></div>
 <?php endif; ?>

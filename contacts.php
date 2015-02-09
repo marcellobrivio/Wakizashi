@@ -17,16 +17,21 @@ Template Name: Contacts
 			<iframe id="map" width="958" height="378" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.it/maps?f=q&amp;source=s_q&amp;hl=it&amp;geocode=&amp;q=<?php echo $mapQ; ?>&amp;output=embed"></iframe>	
 		<?php endif; ?>
 		
-		
-		<div id="post-<?php the_ID(); ?>" class="page-content">
-			
-			<h3><?php the_title(); ?></h3>
-			
-			<div id="page-text" class="no-columns">
-				<?php the_content(); ?>
+		<section>
+			<div id="post-<?php the_ID(); ?>" class="page-content">
+				
+				<header>
+					<h3><?php the_title(); ?></h3>
+				</header>
+				
+				<article>
+					<div id="page-text" class="no-columns">
+						<?php the_content(); ?>
+					</div>
+				</article>
+				
 			</div>
-			
-		</div>
+		</section>
 		
 	<?php endwhile; ?>
 	

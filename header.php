@@ -32,15 +32,19 @@
 
 	<div id="container">
 	
-		<div id="header">
-			<a id="logo" href="<?php bloginfo('url'); ?>">
-				<h1><?php bloginfo('name'); ?></h1>
-				<h2><?php bloginfo('description'); ?></h2>
-			</a>
-			
-			<div id="menu">
-				<?php wp_nav_menu( array('menu' => 'Main Menu', 'container' => false, 'menu_id' => 'main-menu', 'depth' => 1)); ?>
+		<header>
+			<div id="header">
+				<a id="logo" href="<?php bloginfo('url'); ?>">
+					<h1><?php bloginfo('name'); ?></h1>
+					<h2><?php bloginfo('description'); ?></h2>
+				</a>
+				
+				<nav>
+					<div id="menu">
+						<?php wp_nav_menu( array('menu' => 'Main Menu', 'container' => false, 'menu_id' => 'main-menu', 'depth' => 1)); ?>
+					</div>
+				</nav>
+				
+				<div class="clear"></div>
 			</div>
-			
-			<div class="clear"></div>
-		</div>
+		</header>

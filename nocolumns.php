@@ -10,15 +10,21 @@ Template Name: Single Column
 	
 		<?php the_post_thumbnail('size-XL'); ?>
 		
-		<div id="post-<?php the_ID(); ?>" class="page-content">
-			
-			<h3><?php the_title(); ?></h3>
-			
-			<div id="page-text" class="no-columns">
-				<?php the_content(); ?>
+		<section>
+			<div id="post-<?php the_ID(); ?>" class="page-content">
+				
+				<header>
+					<h3><?php the_title(); ?></h3>
+				</header>
+				
+				<article>
+					<div id="page-text" class="no-columns">
+						<?php the_content(); ?>
+					</div>
+				</article>
+				
 			</div>
-			
-		</div>
+		</section>
 		
 	<?php endwhile; ?>
 	
